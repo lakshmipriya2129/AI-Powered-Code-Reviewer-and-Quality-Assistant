@@ -1,0 +1,30 @@
+name: CodeGuard Quality Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run CodeGuard
+        run: |
+          python -m cli.main scan .
+          python -m cli.main report .
+
+      - name: Enforce Quality Gate
+        run: |
+          python -m vcs.precommit

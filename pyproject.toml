@@ -1,0 +1,9 @@
+[tool.codeguard]
+
+exclude = ["venv", "__pycache__", "tests"]
+
+severity_threshold = "warning"
+
+max_complexity = 10
+
+auto_fix = true
