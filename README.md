@@ -19,6 +19,6 @@ This project integrates modern DevOps practices such as configurable rules, CI/C
 
 ->Side-by-Side Code Difference View
 
-✅ Configurable Rules using pyproject.toml
+->Configurable Rules using pyproject.toml
 
-✅ CI/CD Integration Support
+->CI/CD Integration Support
