@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [tool.codeguard]
 
 exclude = ["venv", "__pycache__", "tests"]
@@ -6,4 +7,14 @@ severity_threshold = "warning"
 
 max_complexity = 10
 
+=======
+[tool.codeguard]
+
+exclude = ["venv", "__pycache__", "tests"]
+
+severity_threshold = "warning"
+
+max_complexity = 10
+
+>>>>>>> 2b60f41b6be5557b36a1939eaf733b5d98f9da28
 auto_fix = true

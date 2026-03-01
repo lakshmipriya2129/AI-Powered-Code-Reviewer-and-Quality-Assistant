@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 stages:
   - quality
 
@@ -14,4 +15,22 @@ codeguard-check:
 
   only:
     - merge_requests
+=======
+stages:
+  - quality
+
+codeguard-check:
+  stage: quality
+  image: python:3.11
+
+  before_script:
+    - pip install -r requirements.txt
+
+  script:
+    - python -m cli.main scan .
+    - python -m vcs.precommit
+
+  only:
+    - merge_requests
+>>>>>>> 2b60f41b6be5557b36a1939eaf733b5d98f9da28
     - main
